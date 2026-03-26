@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video editor portfolio showcasing short-form content, viral edits, and motion graphics">
+    <title>Said | Video Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">Said</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="theme-switch" aria-label="Toggle dark mode">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="badge">🎬 Video Editor</span>
+                <h1 class="glow-text">I'm <span class="gradient-text">Said</span><br>I turn raw footage into <span class="gradient-text">stories</span> that stick</h1>
+                <p>1.5+ years crafting viral edits, motion graphics, and content that stops the scroll.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat" data-count="5">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat" data-count="3">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+                <div class="stat" data-count="1.5">
+                    <span class="stat-number">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Featured Work</span>
+                <h2>Selected <span class="gradient-text">Projects</span></h2>
+                <p>A glimpse into my editing style—motion graphics, viral edits, and Minecraft content.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons scroll-reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+                <button class="filter-btn" data-filter="short">Short Form</button>
+                <button class="filter-btn" data-filter="gaming">Gaming</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1: Motion Graphics Reel -->
+                <div class="project-card scroll-reveal" data-category="motion">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <img src="https://img.youtube.com/vi/ig-BwAgNEaA/maxresdefault.jpg" alt="Motion Graphics Reel thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/ig-BwAgNEaA/hqdefault.jpg'">
+                            <button class="play-btn" data-video-id="ig-BwAgNEaA">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Motion Graphics Reel</h3>
+                        <p>Showreel of motion graphics work: arrows, text animations, and visual effects.</p>
+                        <div class="project-meta">
+                            <span class="category">Motion Graphics</span>
+                            <span class="duration">30s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Minecraft Short 1 -->
+                <div class="project-card scroll-reveal" data-category="short gaming">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <img src="https://img.youtube.com/vi/IGzGRa5vrNs/maxresdefault.jpg" alt="Minecraft Short 1 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/IGzGRa5vrNs/hqdefault.jpg'">
+                            <button class="play-btn" data-video-id="IGzGRa5vrNs">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Minecraft Gameplay Short</h3>
+                        <p>Fast-paced short with captions, perfect for YouTube Shorts and TikTok.</p>
+                        <div class="project-meta">
+                            <span class="category">Short Form</span>
+                            <span class="duration">60s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Minecraft Short 2 -->
+                <div class="project-card scroll-reveal" data-category="short gaming">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <img src="https://img.youtube.com/vi/eQRMjtXaEYs/maxresdefault.jpg" alt="Minecraft Short 2 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/eQRMjtXaEYs/hqdefault.jpg'">
+                            <button class="play-btn" data-video-id="eQRMjtXaEYs">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Minecraft Short with Captions</h3>
+                        <p>Engaging short-form edit with on-screen text and dynamic pacing.</p>
+                        <div class="project-meta">
+                            <span class="category">Short Form</span>
+                            <span class="duration">45s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text scroll-reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2>Passionate about <span class="gradient-text">visual storytelling</span></h2>
+                    <p>I'm Said, a video editor with over 1.5 years of experience crafting content that captures attention and delivers results. I specialize in motion graphics, short-form viral edits, and gaming content—always with an eye for pacing and retention.</p>
+                    <div class="skills">
+                        <h4>Tools I Use</h4>
+                        <div class="skill-tags">
+                            <span>DaVinci Resolve</span>
+                            <span>CapCut</span>
+                            <span>After Effects</span>
+                            <span>Motion Graphics</span>
+                            <span>Auto Captions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats scroll-reveal">
+                    <div class="stat-card">
+                        <span class="emoji">⚡</span>
+                        <span class="stat-value">24-48h</span>
+                        <span class="stat-label">Turnaround</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="emoji">🎯</span>
+                        <span class="stat-value">100%</span>
+                        <span class="stat-label">Client Focus</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="emoji">📹</span>
+                        <span class="stat-value">5+</span>
+                        <span class="stat-label">Videos Edited</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Get in Touch</span>
+                <h2>Let's create something <span class="gradient-text">great</span> together</h2>
+                <p>Currently accepting new projects. Hit me up!</p>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:theallknowing539@gmail.com" class="contact-card scroll-reveal">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>theallknowing539@gmail.com</p>
+                </a>
+                <a href="#" class="contact-card scroll-reveal" id="discord-copy">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>said_innovates</p>
+                    <span class="copy-tooltip">Click to copy</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Said. All rights reserved.</p>
+            <p class="footer-tagline">Built with 💻 and 🎬</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-video-container">
+                <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
