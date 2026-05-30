@@ -582,7 +582,8 @@ body {
 .modal-content {
     position: relative;
     width: 90%;
-    max-width: 1200px;
+    /* Changed from 1200px to 450px max-width so vertical short videos don't stretch into massive widescreen landscapes */
+    max-width: 450px; 
     background: #000;
     border-radius: 12px;
     overflow: hidden;
@@ -602,7 +603,8 @@ body {
 
 .modal-video-container {
     position: relative;
-    padding-bottom: 56.25%;
+    /* Keeps the responsive container box scaling flawlessly at a vertical 9:16 ratio */
+    padding-bottom: 177.77%; 
 }
 
 .modal-video-container iframe {
