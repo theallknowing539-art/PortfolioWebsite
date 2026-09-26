@@ -1,408 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Video editor portfolio showcasing short-form content, viral edits, and motion graphics">
-    <title>Said | Video Editor</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Said — Video Editor & Motion Designer</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="#home">Said</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <button id="theme-switch" aria-label="Toggle dark mode">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
-                </button>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+  <!-- Mobile Header -->
+  <div class="mobile-head">
+    <a class="brand-mobile" href="#"><b>S</b> Said</a>
+    <div style="display: flex; gap: 10px;">
+      <button id="theme-mobile" type="button">Daylight</button>
+      <button id="menu" type="button">Menu</button>
+    </div>
+  </div>
+
+  <!-- Sidebar Rail Navigation -->
+  <aside class="rail">
+    <a href="#" class="brand">
+      <b>S</b>
+      <span>Said / Archive</span>
+    </a>
+
+    <nav>
+      <button type="button" data-go="hero"><i>01</i> Command center</button>
+      <button type="button" data-go="projects-section"><i>02</i> Media bin</button>
+      <button type="button" data-go="about"><i>03</i> The operator</button>
+      <button type="button" data-go="contact"><i>04</i> Start a project</button>
     </nav>
 
+    <div class="rail-foot">
+      <button id="theme" type="button">Daylight view</button>
+      <span>Selected Projects<br>Editorial Operations</span>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main>
+    
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <span class="badge">🎬 Video Editor</span>
-                <h1 class="glow-text">I'm <span class="gradient-text">Said</span><br>I turn raw footage into <span class="gradient-text">stories</span> that stick</h1>
-                <p>1.5+ years crafting viral edits, motion graphics, and content that stops the scroll.</p>
-                <div class="hero-buttons">
-                    <a href="#work" class="btn btn-primary">View Work</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
-                </div>
-            </div>
-            <div class="hero-stats">
-                <div class="stat" data-count="11">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat" data-count="7">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Happy Clients</span>
-                </div>
-                <div class="stat" data-count="1.5">
-                    <span class="stat-number">0</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-            </div>
+    <section id="hero" class="hero">
+      <div class="topline">
+        <span>Video Editor / Motion Designer</span>
+        <b>Available for freelance & contract</b>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <h1>Cuts that make <em>attention</em> stay.</h1>
+          <div class="actions">
+            <button type="button" class="primary" data-go="projects-section">Enter the Media Bin</button>
+            <button type="button" data-go="contact">Start a Project</button>
+          </div>
         </div>
-        <div class="hero-bg"></div>
+
+        <div>
+          <p>
+            <strong>Said</strong> is a freelance editor building fast, clear, visual stories for creators, teams, and brands that care about the frame after the frame.
+          </p>
+        </div>
+      </div>
+
+      <div class="evidence">
+        <span>FIELD NOTE 01<br><strong>The edit is not decoration. It is the point of view.</strong></span>
+        <span>SELECTED VISUAL EVIDENCE</span>
+      </div>
+
+      <div class="stats">
+        <div>
+          <strong>11<span>+</span></strong>
+          <small>Projects in the archive</small>
+        </div>
+        <div>
+          <strong>07</strong>
+          <small>Creators / Teams served</small>
+        </div>
+        <div>
+          <strong>1.5<em>Y</em></strong>
+          <small>Making the timeline move</small>
+        </div>
+      </div>
     </section>
 
-    <!-- Work Section -->
-    <section id="work" class="work">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="section-tag">Featured Work</span>
-                <h2>Selected <span class="gradient-text">Projects</span></h2>
-                <p>A glimpse into my editing style—motion graphics, viral short-form, and long-form content.</p>
-            </div>
-            
-            <!-- Filter Buttons -->
-            <div class="filter-buttons scroll-reveal">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="motion">Motion Graphics</button>
-                <button class="filter-btn" data-filter="short">Short Form</button>
-                <button class="filter-btn" data-filter="long">Long Form</button>
-                <button class="filter-btn" data-filter="gaming">Gaming</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Project Card: Talking Head Motion Design Video -->
-<div class="project-card scroll-reveal" data-category="short motion">
-    <div class="video-wrapper">
-        <div class="video-placeholder">
-            <img src="https://img.youtube.com/vi/h9Z2wEj9-z4/maxresdefault.jpg" alt="Short Form Motion Design thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/h9Z2wEj9-z4/hqdefault.jpg'">
-            <button class="play-btn" data-video-id="h9Z2wEj9-z4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                </svg>
-            </button>
+    <!-- Projects Section -->
+    <section id="projects-section" class="module reveal">
+      <header>
+        <div>
+          <span class="eyebrow">02 / MEDIA BIN</span>
+          <h2>Selected <em>work</em></h2>
         </div>
-    </div>
-    <div class="project-info">
-        <h3>Short Form Motion Design Edit</h3>
-        <p>Engagement-focused talking head edit featuring dynamic motion graphics, visual effects, and crisp pacing designed for high retention (i did not work with the youtuber directly this is a re-edit of one of his introductions).</p>
-        <div class="project-meta">
-            <span class="category">Short Form / Motion</span>
-            <span class="duration">Short Form</span>
+        <p>Browse short-form reels, motion graphics packages, and narrative editorial cuts.</p>
+      </header>
+
+      <div class="filters" role="tablist"></div>
+      <div id="projects" class="projects"></div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="module method reveal">
+      <article>
+        <div>
+          <span class="eyebrow">03 / THE OPERATOR</span>
+          <h3>Pacing is a language. <em>We keep it fluent.</em></h3>
         </div>
-    </div>
-</div>
-             
+        <span class="eyebrow">WORKFLOW PROTOCOL</span>
+      </article>
 
-                
-
-                <!-- Project 9: Sample Edit Showcase -->
-                <div class="project-card scroll-reveal" data-category="short motion">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/5d361SYkAkA/maxresdefault.jpg" alt="Sample Edit Showcase thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/5d361SYkAkA/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="5d361SYkAkA">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Common Luke Style Sample Edit</h3>
-                        <p>High-retention editing style showcase. Please note: This video is a sample concept edit; I have not worked with Common Luke's channel directly.</p>
-                        <div class="project-meta">
-                            <span class="category">Video Essay Style</span>
-                            <span class="duration">1m 15s</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Talking Head Short Form Motion Design Video -->
-                <div class="project-card scroll-reveal" data-category="short motion">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/nG4keLireAA/maxresdefault.jpg" alt="Talking Head Motion Design thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/nG4keLireAA/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="nG4keLireAA">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Talking Head Motion Design Edit</h3>
-                        <p>Short-form talking head edit combining dynamic motion graphics, kinetic typography, dynamic zoom-ins, and clean pacing for maximum viewer retention.</p>
-                        <div class="project-meta">
-                            <span class="category">Short Form / Motion</span>
-                            <span class="duration">1m 58s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 10: Q4 German Supply Chains Reel -->
-                <div class="project-card scroll-reveal" data-category="motion short">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/4gPpYTnM2eY/maxresdefault.jpg" alt="Q4 Supply Chains Reel thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/4gPpYTnM2eY/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="4gPpYTnM2eY">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Q4 German Supply Chains Infographic</h3>
-                        <p>Complex data visualization and corporate storytelling mapping out logistics, transit flows, and business infrastructure animations.</p>
-                        <div class="project-meta">
-                            <span class="category">Motion Graphics</span>
-                            <span class="duration">40s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Viral Short 5 -->
-                <div class="project-card scroll-reveal" data-category="short motion">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/_L0IlHTC3Sg/maxresdefault.jpg" alt="Viral Short 5 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/_L0IlHTC3Sg/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="_L0IlHTC3Sg">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Advanced Motion & Retention Edit</h3>
-                        <p>Dynamic short-form content featuring clean visual animations, kinetic titles, and strategic pacing.</p>
-                        <div class="project-meta">
-                            <span class="category">Motion Graphics</span>
-                            <span class="duration">40s</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4: Viral Short 3 -->
-                <div class="project-card scroll-reveal" data-category="motion short">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/VGKbqu9bNoA/maxresdefault.jpg" alt="Viral Short 3 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/VGKbqu9bNoA/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="VGKbqu9bNoA">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Retention-Focused Hook Edit</h3>
-                        <p>Social media short focusing on visual storytelling, seamless transitions, and strong introductory hooks.</p>
-                        <div class="project-meta">
-                            <span class="category">Motion Graphics</span>
-                            <span class="duration">12s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- David Goggins Short 2 -->
-                <div class="project-card scroll-reveal" data-category="short motion">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/EacLZi61J9g/maxresdefault.jpg" alt="Viral Short 6 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/EacLZi61J9g/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="EacLZi61J9g">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Dynamic Visual Storytelling</h3>
-                        <p>Social media short focusing on storytelling, seamless transitions, and strong hooks.</p>
-                        <div class="project-meta">
-                            <span class="category">Short Form</span>
-                            <span class="duration">40s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card scroll-reveal" data-category="short">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/KsIyhva5VGw/maxresdefault.jpg" alt="Viral Short 4 thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/KsIyhva5VGw/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="KsIyhva5VGw">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>High-Retention Pacing Showcase</h3>
-                        <p>Short-form sequence optimized for platform algorithms with clean sound design, sound effects, and color grading.</p>
-                        <div class="project-meta">
-                            <span class="category">Short Form</span>
-                            <span class="duration">25s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 1: Motion Graphics Reel -->
-                <div class="project-card scroll-reveal" data-category="motion">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/ig-BwAgNEaA/maxresdefault.jpg" alt="Motion Graphics Reel thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/ig-BwAgNEaA/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="ig-BwAgNEaA">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Motion Graphics Reel</h3>
-                        <p>Showreel of motion graphics work: arrows, text animations, and visual effects.</p>
-                        <div class="project-meta">
-                            <span class="category">Motion Graphics</span>
-                            <span class="duration">20s</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Minecraft Short -->
-                <div class="project-card scroll-reveal" data-category="short motion gaming">
-                    <div class="video-wrapper">
-                        <div class="video-placeholder">
-                            <img src="https://img.youtube.com/vi/jssnc8uF7VQ/maxresdefault.jpg" alt="Viral Minecraft Short thumbnail" class="thumbnail" onerror="this.src='https://img.youtube.com/vi/jssnc8uF7VQ/hqdefault.jpg'">
-                            <button class="play-btn" data-video-id="jssnc8uF7VQ">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M8 5v14l11-7z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Gaming Motion & Pacing Showcase</h3>
-                        <p>High-energy gaming edit utilizing sync-to-beat pacing, custom text layouts, and rapid retention hooks.</p>
-                        <div class="project-meta">
-                            <span class="category">Gaming / Short Form</span>
-                            <span class="duration">20s</span>
-                        </div>
-                    </div>
-                </div>
-
-               
-
-
-            </div>
-        </div>
+      <ol>
+        <li>
+          <div><b>01</b></div>
+          <div>
+            <strong>The Hook & Architecture</strong>
+            <span>Securing retention in the first three seconds through sound design and structural framing.</span>
+          </div>
+        </li>
+        <li>
+          <div><b>02</b></div>
+          <div>
+            <strong>Motion & Kinetic Flow</strong>
+            <span>Dynamic typography, custom transitions, and visual cues designed to clarify complex ideas.</span>
+          </div>
+        </li>
+        <li>
+          <div><b>03</b></div>
+          <div>
+            <strong>Final Polish</strong>
+            <span>Rigorous color grading, audio leveling, and pacing trims until every frame serves a purpose.</span>
+          </div>
+        </li>
+      </ol>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text scroll-reveal">
-                    <span class="section-tag">About Me</span>
-                    <h2>Passionate about <span class="gradient-text">visual storytelling</span></h2>
-                    <p>I'm Said, a video editor with over 1.5 years of experience crafting content that captures attention and delivers results. I specialize in motion graphics, short-form viral edits, and engaging social content—always with an eye for pacing and retention.</p>
-                    <div class="skills">
-                        <h4>Tools I Use</h4>
-                        <div class="skill-tags">
-                            <span>DaVinci Resolve</span>
-                            <span>Premiere Pro</span>
-                            <span>After Effects</span>
-                            <span>Photoshop</span>
-                            <span>Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats scroll-reveal">
-                    <div class="stat-card">
-                        <span class="emoji">⚡</span>
-                        <span class="stat-value">24-48h</span>
-                        <span class="stat-label">Turnaround</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="emoji">🎯</span>
-                        <span class="stat-value">100%</span>
-                        <span class="stat-label">Client Focus</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="emoji">📹</span>
-                        <span class="stat-value">20+</span>
-                        <span class="stat-label">Videos Edited</span>
-                    </div>
-                </div>
-            </div>
+    <section id="about" class="module about reveal">
+      <div>
+        <span class="eyebrow">ABOUT THE EDITOR</span>
+        <h2>Precision engineering for the <em>timeline</em>.</h2>
+        <p>
+          Armed with deep expertise across professional post-production software and motion suites, every edit is treated as a high-performance system. No fluff, no dead air—just clean execution built to hook viewers and hold them.
+        </p>
+        <div class="tools">
+          <span>After Effects</span>
+          <span>Premiere Pro</span>
+          <span>DaVinci Resolve</span>
+          <span>Photoshop</span>
+          <span>Illustrator</span>
+          <span>Audition</span>
         </div>
+      </div>
+
+      <div class="signal-board">
+        <div class="terminal-content">
+          <span style="color: var(--red);">SYSTEM STATUS: ACTIVE</span><br><br>
+          &gt; Rendering short-form momentum...<br>
+          &gt; Syncing audio tracks &amp; ASIO routing...<br>
+          &gt; Optimizing retention metrics...<br>
+          &gt; Ready for deployment.
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <span class="section-tag">Get in Touch</span>
-                <h2>Let's create something <span class="gradient-text">great</span> together</h2>
-                <p>Currently accepting new projects. Hit me up!</p>
-            </div>
-            <div class="contact-links">
-                <a href="mailto:theallknowing539@gmail.com" class="contact-card scroll-reveal">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p>theallknowing539@gmail.com</p>
-                </a>
-                <a href="#" class="contact-card scroll-reveal" id="discord-copy">
-                    <div class="contact-icon">💬</div>
-                    <h3>Discord</h3>
-                    <p>said_innovates</p>
-                    <span class="copy-tooltip">Click to copy</span>
-                </a>
-            </div>
-        </div>
+    <section id="contact" class="module contact reveal">
+      <div>
+        <span class="eyebrow">04 / INITIATE CONTACT</span>
+        <h2>Let's build something <em>sharp</em>.</h2>
+        <p>Have a project, a channel concept, or a brand video that needs professional cutting power? Reach out directly.</p>
+      </div>
+
+      <div class="contact-links">
+        <button id="email-copy" type="button">
+          <span>Direct Email</span>
+          <strong>theallknowing539@gmail.com</strong>
+          <span>Copy</span>
+        </button>
+
+        <button id="discord" type="button">
+          <span>Discord Handle</span>
+          <strong>said_innovates</strong>
+          <span>Copy</span>
+        </button>
+
+        <a href="https://github.com" target="_blank" rel="noopener">
+          <span>Version Control</span>
+          <strong>GitHub Profile ↗</strong>
+          <span>Open</span>
+        </a>
+      </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2025 Said. All rights reserved.</p>
-            <p class="footer-tagline">Built with 💻 and 🎬</p>
-        </div>
+      <span>© 2026 Said. All rights reserved.</span>
+      <span>Built with speed, precision, and clean CSS.</span>
     </footer>
 
-    <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <div class="modal-video-container">
-                <iframe id="modalVideo" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
+  </main>
 
-    <script src="script.js"></script>
+  <!-- Video Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div>
+      <button id="close" type="button">Close [X]</button>
+      <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Project playback"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
