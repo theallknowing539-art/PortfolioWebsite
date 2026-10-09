@@ -247,13 +247,6 @@ h2 em {
   border-bottom: 1px solid var(--line);
   color: var(--fg);
   font: 11px/1.5 'DM Mono';
-  background:
-    linear-gradient(120deg, rgba(239, 91, 72, 0.15), transparent 42%),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 12%,
-      rgba(200, 216, 109, 0.06) 12% 12.15%
-    );
 }
 
 .evidence strong {
@@ -773,6 +766,7 @@ footer {
     padding: 67px 0;
   }
 }
+
 /* Scroll Reveal Styles */
 .reveal {
   opacity: 0;
