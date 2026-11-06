@@ -523,7 +523,6 @@ h2 em {
   position: relative;
 }
 
-/* Optional clean top bar to give it a true terminal app feel */
 .signal-board::before {
   content: '● ● ●';
   position: absolute;
@@ -577,6 +576,37 @@ h2 em {
   color: var(--fg);
 }
 
+/* New Classes for SVG support */
+.contact-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.contact-meta svg {
+  width: 28px;
+  height: 28px;
+  color: var(--red);
+  flex-shrink: 0;
+}
+
+.contact-meta > div {
+  min-width: 0;
+}
+
+/* Fix for overlapping text */
+.contact-links strong {
+  display: block;
+  margin-top: 5px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(16px, 5vw, 24px); /* Slightly larger, but scales down */
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--fg);
+  word-break: break-word; /* Forces the long email to wrap to the next line */
+}
+
 .contact-links button {
   cursor: pointer;
 }
@@ -584,14 +614,6 @@ h2 em {
 .contact-links button:hover,
 .contact-links a:hover {
   background: var(--card);
-}
-
-.contact-links strong {
-  display: block;
-  margin-top: 5px;
-  font: 14px 'Space Grotesk';
-  letter-spacing: 0;
-  color: var(--fg);
 }
 
 .contact-links button span:last-child {
@@ -764,6 +786,11 @@ footer {
 
   .module {
     padding: 67px 0;
+  }
+  
+  /* Hides the video type filter carousel on mobile */
+  .filters {
+    display: none;
   }
 }
 
